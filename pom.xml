@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.3</version>
+		<version>3.1.12</version>
 		<relativePath/>
 	</parent>
 	<groupId>com.estoquegeral</groupId>
@@ -22,6 +22,7 @@
 	</properties>
 
 	<dependencies>
+
 		<!-- Spring Boot Starter Dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -46,7 +47,6 @@
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
-			<version>${mysql-connector.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -54,7 +54,8 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>1.18.28</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Spring Boot Testing Dependencies -->
@@ -73,11 +74,11 @@
 			</resource>
 		</resources>
 		<plugins>
+		 
 			<!-- Compiler Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>

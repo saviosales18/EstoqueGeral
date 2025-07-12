@@ -1,18 +1,21 @@
 package com.estoquegeral.dto;
 
-public class EstoqueDTO {
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class StockDTO {
     private long id;
-    private String grupo;
+    private String group;
     private String name;
-    private String mark;
+    private String brand;
     private String description;
     private String unit;
     private double quantity;
     private String location;
 
-    public EstoqueDTO() {
-        // Default constructor
-    }
+    // Lombok @NoArgsConstructor já gera o construtor padrão
 
     public long getId() {
         return id;
@@ -22,12 +25,12 @@ public class EstoqueDTO {
         this.id = id;
     }
 
-    public String getGrupo() {
-        return grupo;
+    public String getGroup() {
+        return group;
     }
 
-    public void setGrupo(String group) {
-        this.grupo = grupo;
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     public String getName() {
@@ -38,12 +41,12 @@ public class EstoqueDTO {
         this.name = name;
     }
 
-    public String getMark() {
-        return mark;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMark(String mark) {
-        this.mark = mark;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getDescription() {
