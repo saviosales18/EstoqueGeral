@@ -12,8 +12,11 @@ public class CorsConfiguration {
     public WebMvcConfigurer corsConfigurer() {
          return new WebMvcConfigurer() {
              @Override
-             public void addCorsMappings(CorsRegistry corsRegistry) {
-                 corsRegistry.addMapping("/**").allowedOrigins("http://localhost:3000");
+             public void addCorsMappings(@org.springframework.lang.NonNull CorsRegistry corsRegistry) {
+                 corsRegistry.addMapping("/**")
+                         .allowedOrigins("http://localhost:5500")
+                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                 .allowCredentials(true);
              }
          };
     }
