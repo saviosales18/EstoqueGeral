@@ -1,17 +1,22 @@
 package com.estoquegeral.dto;
 
+import jakarta.validation.constraints.Min;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
-public class StockDTO {
-    private long id;
+@Data
+public class StockUpdateDTO {
+
+    private Long id;
     private String group;
     private String name;
     private String brand;
     private String description;
+
+    @Min(value = 0, message = "A quantidade não pode ser negativa!")
+    private Double quantity;
     private String unit;
-    private double quantity;
     private String location;
+
 }
